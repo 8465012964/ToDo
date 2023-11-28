@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+</style>
+</head>
+<body>
+<div>
+	<h1>ToDo Login</h1>
+	<form action="login" method="post">
+		<fieldset>
+			<legend>Login here</legend>
+			<table>
+				<tr>
+					<th>Email:</th>
+					<th><input type="email" name="email"></th>
+				</tr>
+				<tr>
+					<th>Password:</th>
+					<th><input type="password" name="password"></th>
+				</tr>
+				<tr>
+					<th><button >Login</button></th>
+					<th><button type="reset">Cancel</button></th>
+					
+				</tr>
+				<tr>
+					<th colspan="2"><a href="signup.html"><button type="button" >Click to Create Account</button></a></th>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	
+</div>
+</body>
+</html>
