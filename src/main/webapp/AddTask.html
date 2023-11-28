@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	</style>
+
+</head>
+<body>
+    <div>
+		<h1>Add Task</h1>
+		<form action="add-task" method="post">
+			<fieldset>
+				<legend>Enter Task here</legend>
+				<table>
+					<tr>
+						<th>Task Name:</th>
+						<th><input type="text" name="name"></th>
+					</tr>
+					<tr>
+						<th>Task Description:</th>
+						<th><input type="text" name="description"></th>
+					</tr>
+					<tr>
+						<th><button>Add</button></th>
+						<th><button type="reset">Cancel</button></th>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+		<br>
+		<br>
+		<a href="Home.jsp"><button>Back</button></a>
+	</div>
+</body>
+</html>
