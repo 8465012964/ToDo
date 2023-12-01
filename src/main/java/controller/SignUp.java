@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -12,10 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import dto.UserDto;
 import service.UserService;
+//Used to Map a request string should be same as action
+
 @WebServlet("/signup")
 public class SignUp extends HttpServlet{
+	//Request is Coming from form so do Post
+
    @Override
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	 //Receiving values from front end and Loading inside Object
 	//int id=Integer.parseInt(req.getParameter("id"));
 	String name=req.getParameter("name");
 	String email=req.getParameter("email");
@@ -38,6 +44,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	dto.setMobile(mobile);
 	
 	UserService service=new UserService();
+	//Saving user after checking age and email is unique
 	if(service.saveUser(dto)) {
 		resp.getWriter().print("<h1 align='center' style='color:green'>Account Created Successfully</h1>");
 		req.getRequestDispatcher("login.html").include(req,resp);

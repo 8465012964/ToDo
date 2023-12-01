@@ -16,19 +16,24 @@ div{
 <body>
     <div>
 		<h1>Add Task</h1>
+		<!-- action is address where the values are carried to  -->
+
 		<form action="add-task" method="post">
 			<fieldset>
-				<legend>Enter Task here</legend>
+				<legend>Enter Task here,</legend>
 				<table>
 					<tr>
-						<th>Task Name:</th>
-						<th><input type="text" name="name"></th>
+						<th>Task Name: </th>
+						<!-- Name attribute is Complusory to carry value  -->
+						<th><input type="text" name="tname"></th>
 					</tr>
 					<tr>
-						<th>Task Description:</th>
-						<th><input type="text" name="description"></th>
+						<th>Task Description: </th>
+						<!-- Name attribute is Complusory to carry value  -->
+						<th><input type="text" name="tdescription"></th>
 					</tr>
 					<tr>
+						<!-- Clicking this button will carry the values to action Location  -->
 						<th><button>Add</button></th>
 						<th><button type="reset">Cancel</button></th>
 					</tr>
@@ -37,7 +42,8 @@ div{
 		</form>
 		<br>
 		<br>
-		<a href="Home.jsp"><button>Back</button></a>
+		<!-- This is for Loading Home Page Servlet -->					
+		<a href="home"><button>Back</button></a>
 	</div>
 </body>
 </html>
