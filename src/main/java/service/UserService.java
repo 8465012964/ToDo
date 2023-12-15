@@ -9,7 +9,7 @@ public class UserService {
       public boolean saveUser(UserDto dto) {
     	//checking age
     	  if(dto.getAge()<18) {
-    		  return false;
+    		  return false; 
     	  }else {
     		  UserDao dao=new UserDao();
     		  UserDto dto1=dao.findByEmail(dto.getEmail());
@@ -68,13 +68,23 @@ public class UserService {
 		Task task=dao.findTaskById(id);
 		if(task!=null)
 		{
+			Task task3=null;
+			for(Task task2:dto.getTasks()) {
+				if(task2.getId()==task.getId()) {
+					task3=task2;
+				}
+			}
 		//removing mapping
-		dto.getTasks().remove(task);
+		dto.getTasks().remove(task3);
 		dao.updateUser(dto);
 		//delete task
 		dao.deleteTask(task);
 		}
 
 	}
+	public void updateTask(Task task) {
+		UserDao dao = new UserDao();
+		dao.updateTask(task);
+}
 }
 
